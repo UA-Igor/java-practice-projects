@@ -4,8 +4,8 @@ import java.util.Set;
 public class Billing {
     private Customer customer;
     private Cart cart;
-    Map<Goods, Integer> goods;
-    Set<Goods> positionSet;
+    private Map<Goods, Integer> goods;
+    private Set<Goods> positionSet;
     Billing(Customer c){
         customer = c;
         cart = c.getCart();
