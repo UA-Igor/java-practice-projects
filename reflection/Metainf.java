@@ -22,11 +22,11 @@ public class Metainf {
     }
 
     public <T> void hackTheObject(T obj) throws IllegalAccessException {
-        Field[] fields = obj.getClass().getFields();
-        for (int i = 0; i < fields.length; ++i){
-            if(fields[i].getType().equals("java.lang.String")) {
-                fields[i].setAccessible(true);
-                fields[i].set(obj, message);
+        Field[] fields = obj.getClass().getDeclaredFields();
+        for (Field f: fields){
+            if(f.getType().getName().equals("java.lang.String")) {
+                f.setAccessible(true);
+                f.set(obj, message);
             }
         }
     }
