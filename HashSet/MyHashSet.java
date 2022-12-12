@@ -4,7 +4,6 @@ public class MyHashSet<T>{
 
     private int cacheLength;
     private Object[] arr;
-    private int[] elementsLength;
     private static final Object dummy = new Object();
     private final int TREEIFY_THRESHOLD = 8;
     private final int TREEIFY_COLLAPSE = 4;
